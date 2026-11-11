@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8698:8698"
+    env_file:
+      - .env
+    environment:
+      PORT: 8698
+    restart: unless-stopped
